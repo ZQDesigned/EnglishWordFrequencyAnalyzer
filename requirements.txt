@@ -1,0 +1,4 @@
+nltk
+matplotlib
+wordcloud
+pyqt5 
