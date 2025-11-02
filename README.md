@@ -24,17 +24,20 @@
 ## 🛠️ 安装步骤
 
 1. **克隆项目**
+
 ```bash
 git clone <repository-url>
 cd EnglishWordFrequencyAnalyzer
 ```
 
 2. **安装依赖**
+
 ```bash
 pip install -r requirements.txt
 ```
 
 3. **下载 NLTK 数据**
+
 ```bash
 python -c "import nltk; nltk.download('punkt'); nltk.download('stopwords')"
 ```
@@ -42,11 +45,13 @@ python -c "import nltk; nltk.download('punkt'); nltk.download('stopwords')"
 ## 🎯 使用方法
 
 ### 方法一：图形界面启动
+
 ```bash
 python main.py
 ```
 
 ### 方法二：命令行测试各模块
+
 ```bash
 # 测试文件加载器
 python analyzer/file_loader.py
@@ -68,26 +73,33 @@ python visualization/wordcloud_gen.py
 ## 📖 使用指南
 
 ### 1. 启动程序
+
 运行 `python main.py` 启动图形界面
 
 ### 2. 选择文本文件夹
+
 点击"浏览"按钮，选择包含 `.txt` 文件的文件夹
 
 ### 3. 设置停用词（可选）
+
 如需使用自定义停用词，点击停用词文件的"浏览"按钮选择文件
 
 ### 4. 开始分析
+
 点击"开始分析"按钮，程序将自动：
+
 - 加载所有txt文件
 - 清洗和处理文本
 - 统计词频
 - 显示结果
 
 ### 5. 查看结果
+
 - **词频结果** 选项卡：显示前100个高频词汇
 - **统计信息** 选项卡：显示详细的统计数据
 
 ### 6. 导出和可视化
+
 - **导出CSV**: 将词频数据保存为CSV文件
 - **生成图表**: 显示柱状图（垂直和水平）
 - **生成词云**: 创建词云图
@@ -118,7 +130,9 @@ EnglishWordFrequencyAnalyzer/
 ## 🔧 自定义配置
 
 ### 停用词文件格式
+
 创建一个文本文件，每行一个停用词：
+
 ```
 the
 and
@@ -129,7 +143,9 @@ in
 ```
 
 ### 修改显示数量
+
 在 `main.py` 中可以调整：
+
 - 结果表格显示行数（默认100行）
 - 图表显示词汇数量（柱状图20个，词云100个）
 
@@ -143,6 +159,7 @@ in
 ## 🐛 故障排除
 
 ### 问题1: NLTK数据下载失败
+
 ```bash
 # 手动下载
 python -c "import nltk; nltk.download('punkt', download_dir='~/nltk_data')"
@@ -150,10 +167,12 @@ python -c "import nltk; nltk.download('stopwords', download_dir='~/nltk_data')"
 ```
 
 ### 问题2: PyQt5安装问题
+
 ```bash
 # 如果pip安装失败，尝试conda
 conda install pyqt
 ```
 
 ### 问题3: 中文显示问题
+
 程序界面支持中文，如遇显示问题请检查系统字体配置。
